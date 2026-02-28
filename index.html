@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Cumpleaños</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🌿 Feliz Cumpleaños- 28/02/26🌿</h1>
+    <h2>Para: 💚 Alejandro Emanuel López 💚 </h2>
+
+    <p class="mensaje">
+      Hoy celebro tu vida y todo lo bonito que traes al mundo.  
+      Gracias por cada risa, cada charla y cada momento compartido.
+      Eres alguien muy importante, aunque sea la primera vez que te felicito
+      espero que a partir de ahora, nunca falten mis felicitaciones jajasjad💚
+    </p>
+
+    <h3>📸 Tus recuerdos 💚</h3>
+
+    <div class="galeria">
+      <img src="img/foto1.jpeg" onclick="abrirModal(0)">
+      <img src="img/foto2.jpeg" onclick="abrirModal(1)">
+      <img src="img/foto3.jpeg" onclick="abrirModal(2)">
+      <img src="img/foto4.jpeg" onclick="abrirModal(3)">
+
+      <video onclick="abrirVideo('videos/video1.mp4')" muted>
+        <source src="videos/video1.mp4" type="video/mp4">
+      </video>
+
+      <video onclick="abrirVideo('videos/video2.mp4')" muted>
+        <source src="videos/video2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="notas">
+      <h3>💌 Notas para ti</h3>
+
+      <button class="acordeon">Leer nota de cumpleaños</button>
+      <div class="panel">
+        <p>
+          Feliz cumpleaños Alejandro🥳  
+          Que este nuevo año te regale paz, momentos bonitos y sueños cumplidos.  
+          Gracias por tu amistad y por ser tú. Nunca olvides lo valioso que eres.
+          con mucho amoooooooooor, Mariel.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para ver fotos en grande -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="cerrarModal()">×</span>
+    <img class="modal-img" id="modalImg">
+
+    <button class="prev" onclick="cambiarFoto(-1)">❮</button>
+    <button class="next" onclick="cambiarFoto(1)">❯</button>
+  </div>
+
+  <!-- Modal para ver videos -->
+  <div id="modalVideo" class="modal">
+    <span class="close" onclick="cerrarVideo()">×</span>
+    <video class="modal-img" id="modalVideoPlayer" controls></video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
